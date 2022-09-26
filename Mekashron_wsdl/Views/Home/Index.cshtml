@@ -1,0 +1,127 @@
+﻿@using Mekashron_wsdl.Models.BindingsModels
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model IndexBinding;
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2>Log In</h2>
+                    <h3 class="text-danger">@Model.ErrorMessage</h3>
+                </div>
+            </div>
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            {
+                <div class="row mb-1">
+                    <div class="col">
+                        <h3>Login</h3>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <input asp-for="User.Name" type="text" required />
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col">
+                        <h3>Password</h3>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <input asp-for="User.Password" type="password" required />
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <input type="submit" value="Ok" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    @if(Model.UserData != null)
+    {
+        <h3 class="text-success">@Model.SuccessMessage</h3>
+        <div class="row">
+            <div class="container">
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Entity ID:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.EntityId</h4>
+                </div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>First name:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.FirstName</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Last name:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.LastName</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Company:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Company</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Address:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Address</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>First name:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.FirstName</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>City:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.City</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Country:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Country</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Zip:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Zip</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Mobile:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Mobile</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Email:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Email</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Email Confirm:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.EmailConfirm</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Mobile Confirm:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.MobileConfirm</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Country ID:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.CountryID</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>Status:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.Status</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>lid:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.lid</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>FTP Host:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.FTPHost</h4></div>
+                </div>
+                <div class="row border border-success mb-1">
+                    <div class="col"><h4>FTP Port:</h4></div>
+                    <div class="col" style="word-wrap: break-word"><h4>@Model.UserData.FTPPort</h4></div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
