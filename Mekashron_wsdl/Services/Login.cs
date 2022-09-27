@@ -1,11 +1,6 @@
 ﻿using Mekashron_wsdl.Models;
 using Mekashron_wsdl.Services.Interfaces;
-using System;
-using System.Diagnostics.Metrics;
 using System.Net;
-using System.Reflection;
-using System.Reflection.Metadata;
-using System.Security.Cryptography;
 using System.Xml;
 
 namespace Mekashron_wsdl.Services
@@ -52,7 +47,7 @@ namespace Mekashron_wsdl.Services
             }
             else
             {
-                UserData userData = new() { EntityId = "-1" };
+                UserData userData = new UserData() { EntityId = "-1" };
                 return userData;
             }
         }

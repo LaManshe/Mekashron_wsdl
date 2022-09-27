@@ -3,8 +3,6 @@ using Mekashron_wsdl.Models.BindingsModels;
 using Mekashron_wsdl.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using System.Net;
-using System.Xml;
 
 namespace Mekashron_wsdl.Controllers
 {
